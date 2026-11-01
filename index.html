@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gà Rán Giòn Rụm — Ưu đãi Combo Bucket giảm 30%</title>
+  <meta name="description" content="Landing page gà rán: thực đơn, combo khuyến mãi, hệ thống cửa hàng và đăng ký nhận ưu đãi. Dự án học tập.">
+  <meta property="og:title" content="Gà Rán Giòn Rụm — Ngon chuẩn vị!">
+  <meta property="og:description" content="Combo Bucket giảm 30%. Xem thực đơn và tìm cửa hàng gần bạn.">
+  <meta property="og:image" content="images/hero.svg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo" aria-label="Về đầu trang">
+        <span class="logo__icon" aria-hidden="true">🍗</span>
+        <span class="logo__text">GÀ<strong>GIÒN</strong></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Điều hướng chính">
+        <a href="#promo" class="nav__link">Khuyến mãi</a>
+        <a href="#menu" class="nav__link">Thực đơn</a>
+        <a href="#combos" class="nav__link">Combo</a>
+        <a href="#stores" class="nav__link">Cửa hàng</a>
+        <a href="#signup" class="nav__link">Đăng ký</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="cart-btn" id="cartOpen" aria-label="Mở giỏ hàng">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM5.2 4l.4 2H20a1 1 0 0 1 1 1.2l-1.5 7a1 1 0 0 1-1 .8H8a1 1 0 0 1-1-.8L4.4 3H2V1h3.2a1 1 0 0 1 1 .8L6.6 4Z"/></svg>
+          <span class="cart-btn__badge" id="cartBadge">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Mới ra lò mỗi ngày</p>
+          <h1 class="hero__title">Gà rán giòn rụm —<br><span>Ngon chuẩn vị!</span></h1>
+          <p class="hero__desc">Lớp vỏ vàng giòn, thịt mọng nước, tẩm ướp theo công thức 11 loại gia vị.</p>
+          <div class="hero__buttons">
+            <a href="#menu" class="btn btn--primary">Xem thực đơn</a>
+            <a href="#signup" class="btn btn--outline">Nhận ưu đãi</a>
+          </div>
+        </div>
+        <img class="hero__image" src="images/hero.svg" alt="Xô gà rán và khoai tây chiên" width="500" height="440">
+      </div>
+    </section>
+
+    <!-- KHUYẾN MÃI -->
+    <section class="promo" id="promo">
+      <div class="container">
+        <div class="promo__box reveal">
+          <div>
+            <p class="promo__label">🔥 Ưu đãi có hạn</p>
+            <h2 class="promo__title" id="promoTitle">Giảm 30% Combo Bucket</h2>
+            <p class="promo__desc" id="promoDesc">Chương trình sẽ kết thúc sau:</p>
+          </div>
+          <div class="countdown" id="countdown" aria-live="polite">
+            <div class="countdown__item"><span id="cdDays">00</span><small>Ngày</small></div>
+            <div class="countdown__item"><span id="cdHours">00</span><small>Giờ</small></div>
+            <div class="countdown__item"><span id="cdMinutes">00</span><small>Phút</small></div>
+            <div class="countdown__item"><span id="cdSeconds">00</span><small>Giây</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THỰC ĐƠN -->
+    <section class="section" id="menu">
+      <div class="container">
+        <h2 class="section__title reveal">Thực đơn</h2>
+        <p class="section__subtitle reveal">Chọn món yêu thích, thêm vào giỏ chỉ với 1 chạm</p>
+
+        <div class="menu-tools reveal">
+          <div class="chips" id="categoryChips" role="group" aria-label="Lọc theo danh mục">
+            <button class="chip chip--active" data-category="all">Tất cả</button>
+            <button class="chip" data-category="chicken">Gà rán</button>
+            <button class="chip" data-category="burger">Burger</button>
+            <button class="chip" data-category="side">Món phụ</button>
+            <button class="chip" data-category="drink">Đồ uống</button>
+            <button class="chip" data-category="dessert">Tráng miệng</button>
+          </div>
+          <label class="search">
+            <span class="visually-hidden">Tìm món</span>
+            <input type="search" id="menuSearch" placeholder="🔍 Tìm món, ví dụ: ga cay">
+          </label>
+        </div>
+
+        <div class="grid grid--menu" id="menuGrid"></div>
+      </div>
+    </section>
+
+    <!-- COMBO -->
+    <section class="section section--cream" id="combos">
+      <div class="container">
+        <h2 class="section__title reveal">Combo tiết kiệm</h2>
+        <p class="section__subtitle reveal">Ăn nhiều hơn, trả ít hơn</p>
+        <div class="grid grid--combo" id="comboGrid"></div>
+      </div>
+    </section>
+
+    <!-- TẠI SAO CHỌN CHÚNG TÔI -->
+    <section class="section" id="why">
+      <div class="container">
+        <h2 class="section__title reveal">Tại sao chọn chúng tôi?</h2>
+        <div class="grid grid--why">
+          <div class="why-card reveal"><span class="why-card__icon" aria-hidden="true">🐔</span><h3>Gà tươi mỗi ngày</h3><p>Nguyên liệu nhập mới hằng ngày, không dùng gà đông lạnh lâu.</p></div>
+          <div class="why-card reveal"><span class="why-card__icon" aria-hidden="true">🧂</span><h3>11 loại gia vị</h3><p>Công thức tẩm ướp tạo nên hương vị khó quên.</p></div>
+          <div class="why-card reveal"><span class="why-card__icon" aria-hidden="true">🚚</span><h3>Giao nhanh 30 phút</h3><p>Gà vẫn nóng giòn khi đến tay bạn.</p></div>
+          <div class="why-card reveal"><span class="why-card__icon" aria-hidden="true">💰</span><h3>Giá hợp lý</h3><p>Nhiều combo tiết kiệm đến 30% mỗi tuần.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ĐÁNH GIÁ -->
+    <section class="section section--cream" id="reviews">
+      <div class="container">
+        <h2 class="section__title reveal">Khách hàng nói gì?</h2>
+        <div class="carousel reveal">
+          <button class="carousel__btn" id="reviewPrev" aria-label="Đánh giá trước">‹</button>
+          <div class="carousel__viewport">
+            <div class="carousel__track" id="reviewTrack" aria-live="polite"></div>
+          </div>
+          <button class="carousel__btn" id="reviewNext" aria-label="Đánh giá tiếp theo">›</button>
+        </div>
+        <div class="carousel__dots" id="reviewDots"></div>
+      </div>
+    </section>
+
+    <!-- CỬA HÀNG -->
+    <section class="section" id="stores">
+      <div class="container">
+        <h2 class="section__title reveal">Hệ thống cửa hàng</h2>
+        <div class="stores-filter reveal">
+          <label for="citySelect">Chọn thành phố:</label>
+          <select id="citySelect"></select>
+        </div>
+        <div class="grid grid--stores" id="storeList"></div>
+      </div>
+    </section>
+
+    <!-- ĐĂNG KÝ -->
+    <section class="section signup" id="signup">
+      <div class="container signup__inner">
+        <div class="signup__intro reveal">
+          <h2 class="section__title section__title--light">Nhận ưu đãi độc quyền</h2>
+          <p>Đăng ký để nhận mã giảm giá và thông tin combo mới nhất mỗi tuần.</p>
+          <button class="link-btn" id="exportCsv" type="button">⬇ Tải danh sách đăng ký (CSV)</button>
+        </div>
+
+        <form class="form reveal" id="signupForm" novalidate>
+          <div class="form__group">
+            <label for="fName">Họ tên *</label>
+            <input type="text" id="fName" name="name" autocomplete="name">
+            <p class="form__error" data-error-for="name"></p>
+          </div>
+          <div class="form__group">
+            <label for="fPhone">Số điện thoại *</label>
+            <input type="tel" id="fPhone" name="phone" autocomplete="tel" placeholder="0901234567">
+            <p class="form__error" data-error-for="phone"></p>
+          </div>
+          <div class="form__group">
+            <label for="fEmail">Email</label>
+            <input type="email" id="fEmail" name="email" autocomplete="email">
+            <p class="form__error" data-error-for="email"></p>
+          </div>
+          <div class="form__group">
+            <label for="fCity">Thành phố</label>
+            <select id="fCity" name="city"></select>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Đăng ký ngay</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <a href="#home" class="logo logo--light"><span class="logo__icon" aria-hidden="true">🍗</span><span class="logo__text">GÀ<strong>GIÒN</strong></span></a>
+        <p>Hotline: <a href="tel:19001234">1900 1234</a></p>
+        <p>Mở cửa: 08:00 – 22:00 mỗi ngày</p>
+      </div>
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8Z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM17.5 5.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16 2c.3 2.4 1.8 4 4 4.2v3.4a7.6 7.6 0 0 1-4-1.2V15a6.5 6.5 0 1 1-6.5-6.5h.5V12a3 3 0 1 0 2.5 3V2H16Z"/></svg></a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 GàGiòn. Dự án học tập — không phải website chính thức của KFC.</p>
+    </div>
+  </footer>
+
+  <!-- GIỎ HÀNG -->
+  <div class="overlay" id="cartOverlay" hidden></div>
+  <aside class="cart" id="cart" aria-label="Giỏ hàng" aria-hidden="true">
+    <div class="cart__header">
+      <h2>Giỏ hàng</h2>
+      <button class="cart__close" id="cartClose" aria-label="Đóng giỏ hàng">✕</button>
+    </div>
+    <ul class="cart__list" id="cartList"></ul>
+    <div class="cart__footer">
+      <div class="cart__total"><span>Tổng cộng</span><strong id="cartTotal">0 ₫</strong></div>
+      <button class="btn btn--primary btn--block" id="checkoutBtn">Đặt hàng</button>
+    </div>
+  </aside>
+
+  <!-- THÔNG BÁO -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/csv.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
